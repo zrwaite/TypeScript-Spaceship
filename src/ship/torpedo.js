@@ -2,7 +2,7 @@ import Sprite from "../sprite.js";
 import Vector2 from "../helpers/Vector2.js";
 
 const NUMBER_OF_EXPLOSION_SPRITES = 9;
-const FRAMES_FOR_EXPLOSION = 81;
+const FRAMES_FOR_EXPLOSION = 49;
 const EXPLOSION_MAX_SCALE = 10;
 
 export default class Torpedo extends Sprite {

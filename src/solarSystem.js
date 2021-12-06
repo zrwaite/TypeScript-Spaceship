@@ -36,6 +36,12 @@ export default class SolarSystem{
 		switch(this.name){
 			case "test":
 				this.asteroids.push(...[
+					new Asteroid(new Vector2(0.02, 0.06), 0.06, new Vector2(10, 10), this.game),
+                    new Asteroid(new Vector2(-0.1, -0.5), -0.1, new Vector2(40, 45), this.game),
+                    new Asteroid(new Vector2(-0.04, 0), -0.05, new Vector2(70, 42), this.game),
+                    new Asteroid(new Vector2(0.02, 0.025), 0.04, new Vector2(3, 32), this.game),
+                    new Asteroid(new Vector2(0, 0), -0.15, new Vector2(16, 45), this.game),
+                    new Asteroid(new Vector2(0, -0.1), 0.12, new Vector2(25, 20), this.game),
                     new Asteroid(new Vector2(0.07, 0.06), 0.06, new Vector2(25, 10), this.game),
                     new Asteroid(new Vector2(-0.1, -0.1), -0.1, new Vector2(40, 40), this.game),
                     new Asteroid(new Vector2(-0.04, 0), -0.05, new Vector2(70, 35), this.game),

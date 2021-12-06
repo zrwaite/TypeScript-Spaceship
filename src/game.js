@@ -134,9 +134,12 @@ export default class Game {
 					if (a instanceof(Torpedo) || b instanceof(Torpedo)) {
 						// torpedos can hit each other for now but firing from multiple
 						// tubes at once instantly explodes all torpedos fired at that time
-						// if (a instanceof(Torpedo) && b instanceof(Torpedo)) {
-						// 	continue;
-						// }
+						if (a instanceof(Torpedo) && b instanceof(Torpedo)) {
+							continue;
+						}
+						if (a instanceof(Torpedo) && a.hasExploded || b instanceof(Torpedo) && b.hasExploded) {
+							continue;
+						}
 						a.receiveDamage();
 						b.receiveDamage();
 					} else {
