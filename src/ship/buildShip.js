@@ -120,7 +120,7 @@ const buildShip = (shipName, pos, game) => {
 				pos, game
 			);
 
-		case "Flying Dutchma":
+		case "Flying Dutchman":
 			return new ColonyShip(
 				FlyingDutchmanDefenceController,
 				FlyingDutchmanNavigationController,
@@ -128,7 +128,7 @@ const buildShip = (shipName, pos, game) => {
 				FlyingDutchmanSensorsController,
 				pos, game
 			);
-		case "Galactica":
+		case "Galactica": 
 			return new ColonyShip(
 				GalacticaDefenceController,
 				GalacticaNavigationController,
@@ -136,15 +136,15 @@ const buildShip = (shipName, pos, game) => {
 				GalacticaSensorsController,
 				pos, game
 			);
-		case "Milano":
-			return new ColonyShip(
+		case "Milano": 
+			return new ColonyShip( 
 				MilanoDefenceController,
 				MilanoNavigationController,
 				MilanoPropulsionController,
 				MilanoSensorsController,
 				pos, game
 			);
-		case "Normandy":
+		case "Normandy": 
 			return new ColonyShip(
 				NormandyDefenceController,
 				NormandyNavigationController,
@@ -184,7 +184,7 @@ const buildShip = (shipName, pos, game) => {
 				RamaSensorsController,
 				pos, game
 			);
-		case "Red Dwarf":
+		case "Red Dwarf": 
 			return new ColonyShip(
 				RedDwarfDefenceController,
 				RedDwarfNavigationController,
@@ -227,9 +227,11 @@ const buildShip = (shipName, pos, game) => {
 
 		// fill out cases for all ships
 		case "All": case "all":
+			let shipNames = ['Bebop', 'Bismark', 'Enterprise', 'EventHorizon', 'Flying Dutchman', 'Galactica', 'Milano', 'Normandy', 'Nostromo', 'Pillar Of Autumn', 'Planet Express', 'Rama', 'Red Dwarf', 'Serenity', 'ssAnne', 'Thunderbird III', 'Yamato']
 			let ships = []; 
-			ships.push(getShip("bebop", pos, game)); //Build each ship into array to return
-			// ship.push(getShip("bismark")); // get all ships
+			shipNames.forEach((shipName) => {
+				ships.push(getShip(shipName, pos, game)); //Build each ship into array to return
+			})
 			// Fill this out for all ships
 			return ships;
 	}
